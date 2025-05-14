@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/@material/web/all.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" href="/assets/icono_pagina.svg" type="image/svg+xml" />
+    <link rel="icon" href="/assets/icono_pagina.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
@@ -17,10 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
   </head>
-  <body class="font-roboto bg-gray-50">
-    <header class="bg-blue-600 shadow-lg" id="landing-header">
+  <body class="font-roboto bg-gray-50 min-h-screen flex flex-col">
+    <header class="bg-blue-600 shadow-lg fixed top-0 left-0 w-full z-10" id="landing-header">
       <nav
-        class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center"
+        class="container mx-auto px-4 py-3 flex justify-between items-center"
       >
         <ul class="flex flex-wrap justify-center gap-4 md:gap-6">
           <li>
@@ -43,7 +43,7 @@
       </nav>
     </header>
 
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4 py-8 flex-grow mt-16">
       <article class="bg-white rounded-2xl shadow-md p-6">
         <h1 class="text-3xl font-medium text-gray-800 mb-4">
           5 técnicas para manejar el estrés en exámenes
