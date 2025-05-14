@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salud Mental Estudiantil</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@material/web/all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body class="font-roboto bg-gray-50">
+    <header class="bg-blue-600 shadow-lg" id="landing-header">
+      <nav
+        class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="flex items-center space-x-2 mb-4 md:mb-0">
+          <span class="material-symbols-outlined text-white text-3xl"
+            >psychology</span
+          >
+          <h1 class="text-white text-2xl font-medium">MentalSpace</h1>
+        </div>
+        <ul class="flex flex-wrap justify-center gap-4 md:gap-6">
+          <li>
+            <a
+              href="#"
+              class="nav-link px-3 py-2 rounded-lg transition-colors"
+              data-section="home"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link px-3 py-2 rounded-lg transition-colors"
+              data-section="blog"
+              >Artículos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link px-3 py-2 rounded-lg transition-colors"
+              data-section="tools"
+              >Recursos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link px-3 py-2 rounded-lg transition-colors"
+              data-section="about"
+              >Nosotros</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div
+        id="menu-backdrop"
+        class="absolute bg-black/5 backdrop-blur-lg rounded translate-x-[var(--left)] translate-y-[var(--top)] left-0 top-0 w-[var(--width)] h-[var(--height)] transition-all duration-500 ease-in-out opacity-0 -z-10"
+      ></div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+      <!-- Sección Inicio -->
+      <section id="home" class="section active">
+        <div class="bg-white rounded-2xl shadow-md p-6 mb-8">
+          <h2 class="text-3xl font-medium text-gray-800 mb-4">
+            Bienvenido a MentalSpace
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Tu espacio para aprender sobre salud mental, manejo del estrés y
+            bienestar emocional.
+          </p>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-blue-50 p-6 rounded-xl">
+              <span
+                class="material-symbols-outlined text-blue-600 text-4xl mb-4"
+                >school</span
+              >
+              <h3 class="text-xl font-medium mb-2 hover:text-neutral-700">Estrés Académico</h3>
+              <p class="text-gray-600">
+                Técnicas comprobadas para manejar la presión escolar
+              </p>
+            </div>
+            <div class="bg-green-50 p-6 rounded-xl">
+              <span
+                class="material-symbols-outlined text-green-600 text-4xl mb-4"
+                >sentiment_calm</span
+              >
+              <h3 class="text-xl font-medium mb-2 hover:text-neutral-700">Autoestima</h3>
+              <p class="text-gray-600">
+                Construye una imagen positiva de ti mismo
+              </p>
+            </div>
+            <div class="bg-purple-50 p-6 rounded-xl">
+              <span
+                class="material-symbols-outlined text-purple-600 text-4xl mb-4"
+                >group</span
+              >
+              <h3 class="text-xl font-medium mb-2 hover:text-neutral-700">Comunidad</h3>
+              <p class="text-gray-600">Conéctate con otros estudiantes</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Artículos -->
+      <section id="blog" class="section hidden">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="bg-white rounded-xl shadow-md overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1491841573634-28140fc7ced7"
+              alt="Estrés académico"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="text-xl font-medium mb-2">
+                5 técnicas para manejar el estrés en exámenes
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Aprende métodos científicos para reducir la ansiedad ante los
+                exámenes...
+              </p>
+              <a
+                href="articulos/articuloTecnicas.html"
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800 font-medium"
+                >Leer más →</a
+              >
+            </div>
+          </article>
+
+          <article class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-6">
+              <span
+                class="material-symbols-outlined text-4xl text-green-600 mb-4"
+                >self_improvement</span
+              >
+              <h3 class="text-xl font-medium mb-2">
+                Mindfulness para estudiantes
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Guía práctica para empezar con la meditación...
+              </p>
+              <a
+                href="articulos/articulo2.html"
+                target="_blank"
+                class="text-blue-600 hover:text-blue-800 font-medium"
+                >Leer más →</a
+              >
+            </div>
+          </article>
+
+          <article class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-6">
+              <h3 class="text-xl text-center font-medium mb-2">
+                Ataque de ansiedad: Consejos sobre cómo combatir la ansiedad
+              </h3>
+              <div
+                class="aspect-video bg-gray-100 mb-4 rounded-lg overflow-hidden"
+              >
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/34ZVrmJxEUo?si=Jx6clzz58Chx_-2B"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <p class="text-gray-300 text-center">
+                Consejos sobre el manejo de la ansiedad
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Sección Recursos -->
+      <section id="tools" class="section hidden">
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h2 class="text-2xl font-medium mb-6">Recursos prácticos</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div
+              class="p-6 border rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 class="text-lg font-medium mb-4">Descargables</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a
+                    href="./resources/manejar_ansiedad.pdf"
+                    class="flex items-center text-blue-600 hover:text-blue-800"
+                    download="infografia_respiracion.pdf"
+                  >
+                    <span class="material-symbols-outlined mr-2">download</span>
+                    Guía de ejercicios de respiración
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center text-blue-600 hover:text-blue-800"
+                    download="como_manejar_ansiedad.pdf"
+                  >
+                    <span class="material-symbols-outlined mr-2">download</span>
+                    Como manejar la ansiedad
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div
+              class="p-6 border rounded-xl hover:shadow-md transition-shadow"
+            >
+              <h3 class="text-lg font-medium mb-4">Test de auto-evaluación</h3>
+              <p class="text-gray-600 mb-4">Evalúa tus niveles de autoestima</p>
+              <a
+                href="https://psycho-test.org/es/test/prueba_de_autoevaluaci%C3%B3n.html"
+                class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                target="_blank"
+              >
+                Comenzar test
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Nosotros -->
+      <section id="about" class="section hidden">
+        <div class="bg-white rounded-xl shadow-md p-6">
+          <h2 class="text-2xl font-medium mb-6">Nuestra misión</h2>
+          <p class="text-gray-600 mb-6">
+            MentalSpace nace como una iniciativa de profesionales de la
+            psicología y educación para proveer recursos accesibles y
+            científicos para el bienestar estudiantil.
+          </p>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center p-6">
+              <span
+                class="material-symbols-outlined text-4xl text-blue-600 mb-4"
+                >verified_user</span
+              >
+              <h3 class="font-medium mb-2">Contenido verificado</h3>
+              <p class="text-gray-600">Basado en investigaciones científicas</p>
+            </div>
+            <div class="text-center p-6">
+              <span
+                class="material-symbols-outlined text-4xl text-green-600 mb-4"
+                >accessibility</span
+              >
+              <h3 class="font-medium mb-2">Accesible</h3>
+              <p class="text-gray-600">Recursos gratuitos para todos</p>
+            </div>
+            <div class="text-center p-6">
+              <span
+                class="material-symbols-outlined text-4xl text-purple-600 mb-4"
+                >forum</span
+              >
+              <h3 class="font-medium mb-2">Comunidad</h3>
+              <p class="text-gray-600">Apoyo entre pares</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-blue-600 text-white py-8 mt-12">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-medium mb-4">Contacto</h3>
+            <p class="mb-2">
+              Email:
+              <a
+                href="mailto:mentalSpaceOf@gmail.com"
+                class="hover:text-blue-200"
+                >mentalSpaceOf@gmail.com</a
+              >
+            </p>
+            <p>
+              Teléfono:
+              <span class="hover:text-blue-200">+52 55 333 5674</span>
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-medium mb-4">Síguenos</h3>
+            <div class="flex space-x-4">
+              <a
+                href="https://www.instagram.com/miltom90125"
+                target="_blank"
+                class="p-2 bg-blue-700 rounded-full hover:bg-blue-800"
+                title="Instagram de Milton"
+              >
+                <span>
+                  <img class="w-6" src="assets/insta.png" alt="" />
+                </span>
+              </a>
+              <a
+                href="https://www.instagram.com/__w1517_"
+                target="_blank"
+                class="p-2 bg-blue-700 rounded-full hover:bg-blue-800"
+                title="Instagram de William"
+              >
+                <span>
+                  <img class="w-6" src="assets/insta.png" alt="" />
+                </span>
+              </a>
+              <a
+                href="https://www.instagram.com/antonio.gonzalez1267"
+                target="_blank"
+                class="p-2 bg-blue-700 rounded-full hover:bg-blue-800"
+                title="Instagram de Carlos"
+              >
+                <span>
+                  <img class="w-6" src="assets/insta.png" alt="" />
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-blue-500 mt-8 pt-4 text-center">
+          <p>© INTEGRANTES</p>
+          <ul>
+            <li>Milton Emmanuel Rodríguez Pérez</li>
+            <li>William Paul Macías Vazquez</li>
+            <li>Carlos Antonio Gonzalez Gomez</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
