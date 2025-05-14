@@ -1,5 +1,7 @@
+/* ESTILOS BASE */
 @layer base {
   body {
+    /* ESTILO GENERAL DEL CUERPO */
     @apply text-gray-800;
     display: flex;
     flex-direction: column;
@@ -7,45 +9,57 @@
   }
 
   .hidden {
+    /* CLASE PARA OCULTAR ELEMENTOS */
     @apply hidden;
   }
 
   .active {
+    /* CLASE PARA MOSTRAR ELEMENTOS ACTIVOS */
     @apply block;
   }
 
   .nav-link {
+    /* TRANSICION PARA LOS ENLACES DE NAVEGACION */
     @apply transition-colors duration-200;
   }
 
   .material-symbols-outlined {
+    /* CONFIGURACION DE ICONOS MATERIAL SYMBOLS */
     font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   }
 }
 
+/* CONFIGURACION GLOBAL DE FUENTE */
 * {
   font-family: "Poppins";
 }
 
+/* SOMBRAS */
 .shadow-md {
+  /* SOMBRA MEDIA */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .shadow-lg {
+  /* SOMBRA GRANDE */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+/* TRANSICIONES */
 .transition-shadow {
+  /* TRANSICION PARA SOMBRAS */
   transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .transition-colors {
+  /* TRANSICION PARA COLORES */
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ESTILOS DEL ENCABEZADO */
 header {
   position: fixed;
   top: 0;
@@ -54,6 +68,7 @@ header {
   z-index: 1000;
 }
 
+/* ESTILOS DEL CONTENIDO PRINCIPAL */
 main {
   margin-top: 80px;
   flex: 1;

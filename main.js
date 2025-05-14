@@ -1,8 +1,11 @@
+// ESPERAR A QUE EL DOM ESTE CARGADO
+
 document.addEventListener("DOMContentLoaded", () => {
+  // SELECCIONAR TODOS LOS ENLACES DE NAVEGACION Y SECCIONES
   const links = document.querySelectorAll(".nav-link");
   const sections = document.querySelectorAll(".section");
 
-  // Función para cambiar sección
+  // FUNCION PARA CAMBIAR ENTRE SECCIONES
   const switchSection = (targetSection) => {
     sections.forEach((section) => {
       if (section.id === targetSection) {
@@ -15,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Manejo de navegación
+  // AGREGAR EVENTOS DE CLICK A LOS ENLACES DE NAVEGACION
   links.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
@@ -24,17 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Mostrar sección home al cargar
+  // MOSTRAR LA SECCION HOME AL CARGAR LA PAGINA
   switchSection("home");
 });
 
+// SELECCIONAR TODOS LOS ELEMENTOS DE LISTA EN EL ENCABEZADO Y EL BACKDROP DEL MENU
 const listItem = document.querySelectorAll("#landing-header li");
 const menuBackDrop = document.querySelector("#menu-backdrop");
 
+// AGREGAR EVENTOS PARA MOSTRAR EL BACKDROP AL PASAR EL MOUSE SOBRE LOS ELEMENTOS
 listItem.forEach((item) => {
   item.addEventListener("mouseenter", () => {
     const { left, top, width, height } = item.getBoundingClientRect();
 
+    // ACTUALIZAR LAS PROPIEDADES CSS DEL BACKDROP
     menuBackDrop.style.setProperty("--left", `${left}px`);
     menuBackDrop.style.setProperty("--top", `${top}px`);
     menuBackDrop.style.setProperty("--width", `${width}px`);
@@ -44,6 +50,7 @@ listItem.forEach((item) => {
     menuBackDrop.classList.add("bg-blue-300");
   });
 
+  // OCULTAR EL BACKDROP AL SALIR DEL ELEMENTO
   item.addEventListener("mouseleave", () => {
     menuBackDrop.style.opacity = "0";
     menuBackDrop.style.visibility = "hidden";
