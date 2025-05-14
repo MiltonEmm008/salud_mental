@@ -73,3 +73,10 @@ main {
   margin-top: 80px;
   flex: 1;
 }
+
+/* ESTILOS CUANDO EL ANCHO MAXIMO ES 420PX */
+@media screen and (max-width: 420px) {
+  main {
+    margin-top: 120px;
+  }
+}
