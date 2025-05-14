@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".section");
 
   // FUNCION PARA CAMBIAR ENTRE SECCIONES
-  const switchSection = (targetSection) => {
+  const cambiarSeccion = (targetSection) => {
     sections.forEach((section) => {
       if (section.id === targetSection) {
         section.classList.add("active");
@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
       const targetSection = link.getAttribute("data-section");
-      switchSection(targetSection);
+      cambiarSeccion(targetSection);
     });
   });
 
   // MOSTRAR LA SECCION HOME AL CARGAR LA PAGINA
-  switchSection("home");
+  cambiarSeccion("inicio");
 });
 
 // SELECCIONAR TODOS LOS ELEMENTOS DE LISTA EN EL ENCABEZADO Y EL BACKDROP DEL MENU
@@ -46,14 +46,14 @@ listItem.forEach((item) => {
     menuBackDrop.style.setProperty("--width", `${width}px`);
     menuBackDrop.style.setProperty("--height", `${height}px`);
     menuBackDrop.style.opacity = "1";
-    menuBackDrop.style.visibility = "visible";
+    //menuBackDrop.style.visibility = "visible";
     menuBackDrop.classList.add("bg-blue-300");
   });
 
   // OCULTAR EL BACKDROP AL SALIR DEL ELEMENTO
   item.addEventListener("mouseleave", () => {
     menuBackDrop.style.opacity = "0";
-    menuBackDrop.style.visibility = "hidden";
+    //menuBackDrop.style.visibility = "hidden";
     menuBackDrop.classList.remove("bg-blue-300");
   });
 });
