@@ -16,6 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
         section.classList.remove("active");
       }
     });
+
+    links.forEach((link) => {
+      if (link.getAttribute("data-section") === targetSection) {
+        link.classList.add("text-white");
+      } else {
+        link.classList.remove("text-white");
+      }
+    });
   };
 
   // AGREGAR EVENTOS DE CLICK A LOS ENLACES DE NAVEGACION
@@ -55,5 +63,38 @@ listItem.forEach((item) => {
     menuBackDrop.style.opacity = "0";
     //menuBackDrop.style.visibility = "hidden";
     menuBackDrop.classList.remove("bg-blue-300");
+  });
+});
+
+const articulosVideo = document.querySelectorAll("article.convideo");
+
+let contadorHover;
+
+articulosVideo.forEach((articulo) => {
+  const videoDentro = articulo.querySelector("[data-video]");
+
+  articulo.addEventListener("mouseenter", () => {
+    contadorHover = setTimeout(() => {
+      videoDentro.classList.remove(
+        "max-h-0",
+        "opacity-0",
+        "pointer-events-none"
+      );
+      videoDentro.classList.add(
+        "max-h-[300px]",
+        "opacity-100",
+        "pointer-events-auto"
+      );
+    }, 750);
+  });
+
+  articulo.addEventListener("mouseleave", () => {
+    clearTimeout(contadorHover);
+    videoDentro.classList.remove(
+      "max-h-[300px]",
+      "opacity-100",
+      "pointer-events-auto"
+    );
+    videoDentro.classList.add("max-h-0", "opacity-0", "pointer-events-none");
   });
 });

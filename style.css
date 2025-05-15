@@ -60,13 +60,13 @@
 }
 
 /* ESTILOS DEL ENCABEZADO */
-header {
+/* header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-}
+} */
 
 /* ESTILOS DEL CONTENIDO PRINCIPAL */
 main {
