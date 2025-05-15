@@ -159,6 +159,19 @@
             data-video="video1"
             class="convideo bg-white rounded-xl shadow-md transition-all duration-300 hover:-translate-y-2"
           >
+            <div
+              class="overflow-hidden max-h-0 opacity-0 pointer-events-none transition-all duration-500 ease-in-out"
+              data-video
+            >
+              <video
+                title="video demostrativo"
+                src="/assets/video_fondo.mp4"
+                autoplay
+                muted
+                loop
+                class="w-full"
+              ></video>
+            </div>
             <img
               src="https://images.unsplash.com/photo-1491841573634-28140fc7ced7"
               alt="Estrés académico"
@@ -172,19 +185,7 @@
                 Aprende métodos científicos para reducir la ansiedad ante los
                 exámenes...
               </p>
-              <div
-                class="overflow-hidden max-h-0 opacity-0 pointer-events-none transition-all duration-500 ease-in-out"
-                data-video
-              >
-                <video
-                  title="video demostrativo"
-                  src="/assets/video_fondo.mp4"
-                  autoplay
-                  muted
-                  loop
-                  class="w-full rounded-lg mt-4"
-                ></video>
-              </div>
+
               <a
                 href="articulos/articuloTecnicas.html"
                 target="_blank"
@@ -198,30 +199,31 @@
             data-video="video2"
             class="convideo bg-white rounded-xl shadow-md transition-all duration-300 hover:-translate-y-2"
           >
+            <div
+              class="overflow-hidden max-h-0 opacity-0 pointer-events-none transition-all duration-500 ease-in-out"
+              data-video
+            >
+              <video
+                title="video demostrativo"
+                src="/assets/video_relajacion.mp4"
+                autoplay
+                muted
+                loop
+                class="w-full"
+              ></video>
+            </div>
+            <img
+              src="/assets/mindfull.jpg"
+              alt="Estrés académico"
+              class="w-full h-48 object-cover"
+            />
             <div class="p-6">
-              <span
-                class="material-symbols-outlined text-4xl text-green-600 mb-4"
-                >self_improvement</span
-              >
               <h3 class="text-xl font-medium mb-2">
                 Mindfulness para estudiantes
               </h3>
               <p class="text-gray-600 mb-4">
                 Guía práctica para empezar con la meditación...
               </p>
-              <div
-                class="overflow-hidden max-h-0 opacity-0 pointer-events-none transition-all duration-500 ease-in-out"
-                data-video
-              >
-                <video
-                  title="video demostrativo"
-                  src="/assets/video_relajacion.mp4"
-                  autoplay
-                  muted
-                  loop
-                  class="w-full rounded-lg mt-4"
-                ></video>
-              </div>
               <a
                 href="articulos/articulo2.html"
                 target="_blank"
@@ -271,7 +273,7 @@
               <ul class="space-y-5">
                 <li>
                   <a
-                    href="./resources/manejar_ansiedad.pdf"
+                    href="./resources/infografia_respiracion.pdf"
                     class="flex items-center text-blue-600 hover:text-blue-800"
                     download="infografia_respiracion.pdf"
                   >
@@ -281,12 +283,22 @@
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/resources/manejar_ansiedad.pdf"
                     class="flex items-center text-blue-600 hover:text-blue-800"
                     download="como_manejar_ansiedad.pdf"
                   >
                     <span class="material-symbols-outlined mr-2">download</span>
                     Como manejar la ansiedad
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/resources/presentacion.pdf"
+                    class="flex items-center text-blue-600 hover:text-blue-800"
+                    download="presentacion.pdf"
+                  >
+                    <span class="material-symbols-outlined mr-2">download</span>
+                    MentalSpace
                   </a>
                 </li>
               </ul>

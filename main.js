@@ -72,29 +72,24 @@ let contadorHover;
 
 articulosVideo.forEach((articulo) => {
   const videoDentro = articulo.querySelector("[data-video]");
+  const fotoDento = articulo.querySelector("img");
 
   articulo.addEventListener("mouseenter", () => {
     contadorHover = setTimeout(() => {
+      fotoDento.classList.add("hidden");
       videoDentro.classList.remove(
         "max-h-0",
         "opacity-0",
         "pointer-events-none"
       );
-      videoDentro.classList.add(
-        "max-h-[300px]",
-        "opacity-100",
-        "pointer-events-auto"
-      );
+      videoDentro.classList.add("h-48", "opacity-100", "pointer-events-auto");
     }, 750);
   });
 
   articulo.addEventListener("mouseleave", () => {
     clearTimeout(contadorHover);
-    videoDentro.classList.remove(
-      "max-h-[300px]",
-      "opacity-100",
-      "pointer-events-auto"
-    );
+    fotoDento.classList.remove("hidden");
+    videoDentro.classList.remove("h-48", "opacity-100", "pointer-events-auto");
     videoDentro.classList.add("max-h-0", "opacity-0", "pointer-events-none");
   });
 });
